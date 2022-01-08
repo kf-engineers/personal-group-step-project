@@ -48,7 +48,7 @@ public class ServiceImpl implements Service {
 
     @Override
     public void bookingFlights() {
-        boolean b = false;
+        boolean isFlightExist = false;
         int peopleNumber = 0;
         List<Flight> flights = getSearchingFlights();
         Flight bookFlight = null;
@@ -58,12 +58,12 @@ public class ServiceImpl implements Service {
 
         for (Flight flight : flights) {
             if (flight.getFlightNumber().equals(flightNumber)) {
-                b = true;
+                isFlightExist = true;
                 bookFlight = flight;
             }
         }
 
-        if (b) {
+        if (isFlightExist) {
             peopleNumber = checkPeopleNumber();
         }
 
@@ -140,7 +140,6 @@ public class ServiceImpl implements Service {
         while (c) {
             System.out.print("Enter date(YYYY-MM-DD): ");
             date = sc.nextLine();
-
 
             if (date.isEmpty()) {
                 System.out.println("Date can't be empty!");

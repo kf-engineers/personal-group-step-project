@@ -166,9 +166,7 @@ public class PgJDBC implements JDBC {
         try {
             ResultSet rs = statement.executeQuery(sql);
 
-            System.out.println(rs);
             return getResult(rs);
-
         } catch (SQLException e) {
             throw new DataNotFoundException();
         }

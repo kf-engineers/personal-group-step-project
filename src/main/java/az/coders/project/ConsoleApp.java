@@ -22,7 +22,7 @@ public class ConsoleApp {
             System.out.println("3. Flights search and booking(BOOK).");
             System.out.println("4. Booking cancelling(CANCEL).");
             System.out.println("5. My flights(FLIGHTS).");
-            System.out.println("8. Exit(EXIT).");
+            System.out.println("6. Exit(EXIT).");
             System.out.print("Enter command: ");
             String cmd = sc.nextLine();
 
